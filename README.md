@@ -43,4 +43,4 @@ A felhasználó sportolását segítő alkalmazás, spring backend-del, és angu
 <h2>Tervezés</h2>
 <h3>Adatbázis terv:</h3>
 
-![adatbazisterv](https://user-images.githubusercontent.com/47753407/76548305-d16df780-648e-11ea-8784-7413cbe69a1a.jpg)
+![adatbazisterv](https://user-images.githubusercontent.com/47753407/76559171-efdbef00-649e-11ea-8e14-d0820976a9b5.jpg)
