@@ -1,4 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: "Muli Black"; }
+a { font-family: Muli;}
+
+@font-face {
+    font-family: Muli;
+    src: url(assets/fonts/muli/Muli.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: Muli Black;
+    src: url(assets/fonts/muli/Muli-Bold.ttf) format("opentype");
+}

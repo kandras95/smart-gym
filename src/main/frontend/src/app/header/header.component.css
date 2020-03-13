@@ -1,4 +1,7 @@
-button {
+mat-icon {
     margin-left: 7.5%;
 }
 
+a {
+    padding-left: 5px;
+}
