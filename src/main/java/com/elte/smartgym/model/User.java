@@ -1,8 +1,10 @@
 package com.elte.smartgym.model;
 
 import com.elte.smartgym.model.enums.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -23,6 +25,9 @@ public class User {
     private Role role;
 
     @Column
+    private String e_mail;
+
+    @Column
     private Integer weight;
 
     @Column
@@ -37,4 +42,7 @@ public class User {
     @ManyToOne(targetEntity = Plan.class, optional = false)
     @JoinColumn
     private Plan plan;
+
+    @OneToMany(targetEntity = Rating.class, mappedBy = "user")
+    private List<Rating> ratings;
 }

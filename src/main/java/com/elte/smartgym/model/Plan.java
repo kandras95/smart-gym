@@ -15,10 +15,12 @@ public class Plan {
     private Integer id;
 
     @Column
-    private Integer popularity;
+    private String name;
+
+    @Column
+    private Integer difficulty;
 
     @ManyToMany
-    @JsonIgnore
     private List<Exercise> exercises;
 
     @OneToMany(targetEntity = User.class, mappedBy = "plan")
