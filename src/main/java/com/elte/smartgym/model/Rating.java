@@ -1,5 +1,6 @@
 package com.elte.smartgym.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import javax.persistence.*;
 
@@ -21,7 +22,8 @@ public class Rating {
     @Column
     private Integer efficiency;
 
-    @OneToOne(targetEntity = User.class, optional = false)
+    @ManyToOne(targetEntity = User.class, optional = false)
     @JoinColumn
+    @JsonIgnore
     private User user;
 }
