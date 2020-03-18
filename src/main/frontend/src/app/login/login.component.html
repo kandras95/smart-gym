@@ -1,0 +1,25 @@
+<h1 class="center">Welcome to SmartGym!</h1>
+<h2 class="center">Please log in!</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="center">
+
+    <div *ngIf="message">
+
+    </div>
+
+    <mat-form-field color="accent">
+        <input matInput placeholder="Username" formControlName="username" required>
+        <mat-error *ngIf="username.invalid">Username is required</mat-error>
+    </mat-form-field><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" required
+            [type]="hidePassword ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="password.invalid">Password is required</mat-error>
+    </mat-form-field>
+    <br>
+    <div>
+        <button mat-raised-button type="submit" color="accent">Login</button>
+    </div>
+</form>
