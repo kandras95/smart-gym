@@ -1,0 +1,23 @@
+<section *ngIf="showComponent">
+    <h3>Modify your data below:</h3>
+    <form [formGroup]="form">
+        <span>
+            <p>Full name</p>
+            <mat-form-field appearance="fill">
+
+                <input matInput>
+            </mat-form-field>
+        </span>
+        <p>Weight</p>
+        <mat-form-field appearance="fill">
+
+            <input matInput>
+        </mat-form-field>
+
+        <p>Goal weight</p>
+        <mat-form-field appearance="fill">
+
+            <input matInput>
+        </mat-form-field>
+    </form>
+</section>

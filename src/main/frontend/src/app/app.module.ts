@@ -22,6 +22,7 @@ import {
 } from '@angular/material';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModifyDataComponent } from './modify-data/modify-data.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ModifyDataComponent
   ],
   imports: [
     BrowserModule,
