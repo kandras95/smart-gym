@@ -1,5 +1,11 @@
 
 <h1>SmartGym</h1>
+
+<h3>CircleCI</h3>
+[![CircleCI](https://circleci.com/gh/kandras95/smart-gym.svg?style=svg)](https://circleci.com/gh/kandras95/smart-gym)
+<br>
+<br>
+
 A felhasználó sportolását segítő alkalmazás, spring backend-del, és angular frontend-del megvalósítva.
 <h2>Követelmények</h2>
 <h3>Funkcionális követelmények</h3>
