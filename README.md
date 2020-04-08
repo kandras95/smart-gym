@@ -2,7 +2,9 @@
 <h1>SmartGym</h1>
 
 <h3>CircleCI</h3>
+
 [![CircleCI](https://circleci.com/gh/kandras95/smart-gym.svg?style=svg)](https://circleci.com/gh/kandras95/smart-gym)
+
 <br>
 <br>
 
