@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder } from '@angular/forms';
 
@@ -10,6 +10,7 @@ import { Validators, FormBuilder } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   hidePassword = true;
+  @Output() isLoggedIn: boolean = false;
 
   constructor(private router: Router, private fb: FormBuilder) { }
 
