@@ -1,6 +1,7 @@
 package com.elte.smartgym.controller;
 
 import com.elte.smartgym.model.Plan;
+import com.elte.smartgym.model.User;
 import com.elte.smartgym.repository.PlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -50,6 +51,9 @@ public class PlanController {
     public ResponseEntity delete(@PathVariable Integer id) {
         Optional<Plan> oPlan = planRepository.findById(id);
         if (oPlan.isPresent()) {
+            for(User user : oPlan.get().getUsers())
+                user.setPlan(null);
+
             planRepository.deleteById(id);
             return ResponseEntity.ok().build();
         } else {

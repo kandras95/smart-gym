@@ -3,6 +3,9 @@ package com.elte.smartgym.model;
 import com.elte.smartgym.model.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -39,10 +42,10 @@ public class User {
     @Column
     private Integer score;
 
-    @ManyToOne(targetEntity = Plan.class, optional = false)
+    @ManyToOne(targetEntity = Plan.class)
     @JoinColumn
     private Plan plan;
 
-    @OneToMany(targetEntity = Rating.class, mappedBy = "user")
+    @OneToMany(targetEntity = Rating.class, mappedBy = "user", orphanRemoval = true)
     private List<Rating> ratings;
 }

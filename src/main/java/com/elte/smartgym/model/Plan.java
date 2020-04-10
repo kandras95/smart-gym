@@ -2,6 +2,7 @@ package com.elte.smartgym.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -26,4 +27,8 @@ public class Plan {
     @OneToMany(targetEntity = User.class, mappedBy = "plan")
     @JsonIgnore
     private List<User> users;
+
+    public void removeExercise(Exercise exercise) {
+        this.exercises.remove(exercise);
+    }
 }

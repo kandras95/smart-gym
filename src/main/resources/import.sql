@@ -12,7 +12,7 @@ insert into plan_exercises (plans_id, exercises_id) values (1, 4);
 insert into plan_exercises (plans_id, exercises_id) values (2, 1);
 insert into plan_exercises (plans_id, exercises_id) values (2, 3);
 
-insert into user (name, username, role, e_mail, weight, goal_weight, height, score, plan_id) values ('Dani', 'kdani02', 'TRAINER', 'ada@freemail.hu', 80, 80, 179, 4, 1);
+insert into user (name, username, role, e_mail, weight, goal_weight, height, score) values ('Dani', 'kdani02', 'TRAINER', 'ada@freemail.hu', 80, 80, 179, 4);
 insert into user (name, username, role, e_mail, weight, goal_weight, height, score, plan_id) values ('Kati', 'kata97', 'USER', 'fesnklh@gmail.com', 73, 70, 169, 0, 1);
 insert into user (name, username, role, e_mail, weight, goal_weight, height, score, plan_id) values ('Misi', 'miska23', 'USER', 'egas@gmail.hu', 86, 82, 184, 0, 2);
 
