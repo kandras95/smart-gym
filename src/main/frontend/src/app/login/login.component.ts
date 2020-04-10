@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   hidePassword = true;
   @Output() isLoggedIn: boolean = false;
 
-  constructor(private router: Router, private fb: FormBuilder) { }
+  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) { }
 
   form = this.fb.group({
     username: ['', [Validators.required]],
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.authService.isUserLoggedIn = true;
     this.router.navigate(['/home']);
   }
 
