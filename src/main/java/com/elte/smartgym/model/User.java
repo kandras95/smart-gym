@@ -2,15 +2,22 @@ package com.elte.smartgym.model;
 
 import com.elte.smartgym.model.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "User")
 public class User {
 
@@ -46,6 +53,6 @@ public class User {
     @JoinColumn
     private Plan plan;
 
-    @OneToMany(targetEntity = Rating.class, mappedBy = "user", orphanRemoval = true)
+    @OneToMany(targetEntity = Rating.class, mappedBy = "user", cascade = CascadeType.REMOVE)
     private List<Rating> ratings;
 }
