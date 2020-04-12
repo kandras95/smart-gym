@@ -54,6 +54,11 @@ A felhasználó sportolását segítő alkalmazás, spring backend-del, és angu
 ![adatbazisterv](https://user-images.githubusercontent.com/47753407/76559171-efdbef00-649e-11ea-8e14-d0820976a9b5.jpg)
 
 ----------
+
+
+
+
+
 Vázlatos terv:
 Drive-os link a szerkeszthető változat, jobban látszanak a dolgok:
 https://drive.google.com/open?id=1EyClmUDdWK5D0ucnKWybXwGYkkTQ71jH
@@ -75,4 +80,4 @@ Edző nézete a Plansnél, kilistázva a hozzá tartozóm edzéstervek, amiket t
 ![plan_trainer2](https://user-images.githubusercontent.com/47753407/76700641-cb0f9380-66b9-11ea-8586-e87709888c37.png)
 
 --------
-Eddig ennyi. Ne feledjétek a kézfertőtlenítőt!
+
