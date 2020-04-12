@@ -6,6 +6,8 @@
 [![CircleCI](https://circleci.com/gh/kandras95/smart-gym.svg?style=svg)](https://circleci.com/gh/kandras95/smart-gym)
 
 <br>
+A CI minden commitnál lefuttatja az yml-ben leírt parancsokat, a test resultokat a megfelelő xml file-ba helyezi, a badge-re kattintva megjelenik a dashboard.
+<br>
 <br>
 
 A felhasználó sportolását segítő alkalmazás, spring backend-del, és angular frontend-del megvalósítva.
