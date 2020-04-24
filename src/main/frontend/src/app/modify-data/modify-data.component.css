@@ -6,3 +6,8 @@ section {
 mat-form-field {
     height: 50px;
 }
+
+button {
+    margin-top: 2.5%;
+    margin-right: 2%;
+}
