@@ -1,27 +1,25 @@
 <section *ngIf="showComponent">
     <h3>Modify your data below:</h3>
     <form [formGroup]="form">
-        <span>
-            <p>Full name</p>
-            <mat-form-field appearance="fill">
+        <p>Full name</p>
+        <mat-form-field appearance="fill">
 
-                <input matInput>
-            </mat-form-field>
-        </span>
+            <input matInput>
+        </mat-form-field>
+        <br>
         <p>Weight</p>
         <mat-form-field appearance="fill">
 
             <input matInput>
         </mat-form-field>
-
+        <br>
         <p>Goal weight</p>
         <mat-form-field appearance="fill">
 
             <input matInput>
         </mat-form-field>
+        <br>
     </form>
-    <span>
-        <button mat-raised-button color="primary">Save</button>
-        <button mat-raised-button color="accent">Cancel</button>
-    </span>
+    <button mat-raised-button color="primary">Save</button>
+    <button mat-raised-button color="accent">Cancel</button>
 </section>
