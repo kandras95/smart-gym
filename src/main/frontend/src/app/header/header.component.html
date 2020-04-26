@@ -1,0 +1,5 @@
+<mat-toolbar color="primary">
+    <mat-icon *ngIf="authService.isUserLoggedIn()" color="accent">home</mat-icon>
+    <a *ngIf="authService.isUserLoggedIn()" [routerLink]="['/home']">Home</a>
+    <a *ngIf="authService.isUserLoggedIn()" [routerLink]="['/plans']">Plans</a>
+    <a *ngIf="authService.isUserLoggedIn()" [routerLink]="['/clients']">Clients</a>

@@ -1,0 +1,15 @@
+<h2>Welcome Placeholder!</h2>
+<span>
+    <h3><u>Personal details:</u></h3>
+    <button mat-raised-button color="primary" (click)="toggleChild()">Modify</button>
+</span><br>
+<div class="details">
+    Full name<br>
+    E-mail<br>
+    Weight<br>
+    Height<br>
+    Goal weight<br>
+    Score<br>
+</div>
+<div class="vl"></div>
+<app-modify-data [showComponent]="showChild"></app-modify-data>

@@ -1,0 +1,29 @@
+mat-icon {
+    margin-left: 15%;
+}
+
+a {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: none;
+    transition: 0.125s;
+}
+
+a:active{
+    color: grey;
+    text-decoration: none;
+}

@@ -1,0 +1,14 @@
+section {
+    margin-left: 15%;
+}
+
+p {
+    display: inline;
+    padding-right: 10px;
+}
+
+button {
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 15%;
+}
