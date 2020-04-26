@@ -32,3 +32,52 @@ jobs: # a collection of steps
           # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
       # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples   e https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+  
+  lint:
+    docker: # run the steps with Docker
+      - image: circleci/openjdk:8-jdk-stretch # ...with this image as the primary container; this is where all `steps` will run
+
+    working_directory:  ~/repo/src/main/frontend
+
+    steps:
+
+    # Checkout the code from the branch into the working_directory
+    - checkout
+
+    # Log the current branch
+    - run:
+        name: Show current branch
+        command: echo ${CIRCLE_BRANCH}
+
+    # Restore local dependencies from cache
+    - restore_cache:
+        keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+
+    # Install project dependencies
+    - run:
+        name: Install local dependencies
+        command: npm install
+
+    # Cache local dependencies if they don't exist
+    - save_cache:
+        key: v1-dependencies-{{ checksum "package.json" }}
+            paths:
+                - node_modules
+
+    # Lint the source code
+    - run:
+        name: Linting
+        command: npm run lint
+
+
+workflows:
+  version: 2
+  build_test_and_lint:
+    jobs:
+      - build #this also runs tests
+      - lint
+        branches:
+          only:
+           - /frontend-.*/
