@@ -11,7 +11,7 @@ import { AuthService } from 'src/auth.service';
 export class LoginComponent implements OnInit {
 
   hidePassword = true;
-  @Output() isLoggedIn: boolean = false;
+  @Output() isLoggedIn = false;
 
   constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) { }
 
