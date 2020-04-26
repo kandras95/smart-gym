@@ -80,7 +80,7 @@ workflows:
           filters:
             branches:
               ignore:
-                -/frontend-.*/
+                - /frontend-.*/
       - lint:
           filters:
             branches:
