@@ -8,6 +8,9 @@
 <br>
 A CI minden commitnál lefuttatja az yml-ben leírt parancsokat, a test resultokat a megfelelő xml file-ba helyezi, a badge-re kattintva megjelenik a dashboard.
 <br>
+<h3>CodeCov</h3>
+
+[![codecov](https://codecov.io/gh/kandras95/smart-gym/branch/development/graph/badge.svg)](https://codecov.io/gh/kandras95/smart-gym)
 <br>
 
 A felhasználó sportolását segítő alkalmazás, spring backend-del, és angular frontend-del megvalósítva.
